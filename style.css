@@ -1,0 +1,33 @@
+.body-container{
+    height: 800px;
+    width: auto;
+    background-color: rgb(194, 194, 194);
+    padding-top: 40px;
+}
+.weather-body{
+    padding: 20px 40px;
+    height: 400px;
+    max-width: 800px;
+    margin: 0 auto;
+   
+    background-color: rgb(243, 243, 243);
+}
+.weather-body p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    /* background-color: rgb(157, 161, 143); */
+}
+
+/* .leftrow{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} */
+.col1,.col3{
+    height: 20%;
+}
+.col2{
+    height:60%
+}
+
