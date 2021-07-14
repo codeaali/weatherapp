@@ -10,14 +10,21 @@ function populate(weatherdata) {
     let city_name = city.value
     
   
-        local.innerHTML = weather
+        local.innerHTML = `Current Weather <b>${weather}</b`
         temp.innerHTML = `<h1 style="font-size:120px;font-family: Arial, Helvetica, sans-serif;">${tempr}&deg;<span style="color:grey;font-size:40px;margin-left:-40px;font-weight:200">C</span></h1>`
+        nav_temp.innerHTML = `${tempr}&deg;C`
         feel.innerHTML = `Feels like <b>${realfeel}&deg;C</b> `
         desc.innerHTML =  description
         icon.innerHTML = `<img style="-webkit-user-select: none;margin: auto;background-color: rgb(157, 161, 143);transition: background-color 300ms;" src="https://openweathermap.org/img/wn/${iconcode}@2x.png" alt="">`
         //icon.innerHTML = ` <img src="https://openweathermap.org/img/wn/${iconcode}@2x.png" alt="">`
         wind.innerHTML = `Wind <b>NW ${windspeed} Km/h</b>`
-        gust.innerHTML = `Wind Gusts <b>${windgust} Km/h</b>`
+        if(windgust == undefined){
+            gust.innerHTML = `<p>Wind Gusts <span style="color:red">Not Available</span></p>`
+        }else{
+            
+            gust.innerHTML = `Wind Gusts <b>${windgust} Km/h</b>`
+        }
+       
         humid.innerHTML = `Humidity <b>${humidity}</b>`
         header_city.innerHTML = city_name
 
